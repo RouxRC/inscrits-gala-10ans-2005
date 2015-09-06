@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import os, codecs
+import os, codecs, random
 import requests
 import pystache
 from contextlib import nested
 from config import GOOGLESPREADSHEET
 
 try:
-    csv = requests.get("https://docs.google.com/spreadsheets/d/1lA8W04Z7oMjqIjiar3VY9e_aUvNHr7avRDYyeATYQhQ/pub?gid=1564157489&single=true&output=csv").content.split('\n')[1:]
+    csv = requests.get("https://docs.google.com/spreadsheets/d/1lA8W04Z7oMjqIjiar3VY9e_aUvNHr7avRDYyeATYQhQ/pub?gid=1564157489&single=true&output=csv&%s" % random.random()).content.split('\n')[1:]
 except Exception as e:
     print "ERROR downloading csv data:"
     print "%s: %s" % (type(e), e)
