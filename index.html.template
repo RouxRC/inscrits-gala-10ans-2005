@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <title>Pré-inscrits Gala ECL 10 ans promo 2005</title>
+</head>
+<style>
+body{
+  margin: auto;
+  width: 60%;
+}
+h1, p, ul{
+  text-align: center;
+}
+span, p b a{
+  margin-left: 30px;
+}
+li{
+  list-style-type: none;
+}
+</style>
+<body>
+
+<h1>Pré-inscrits Gala ECL 10 ans promo 2005</h1>
+
+<p>Déjà {{total}} anciens 2005 inscrits pour <b>{{total2}} personnes</b> au total en comptant les +1 :</p>
+<p>
+  <span>Total Dîner : {{totaldiner}}</span>
+  <span>Total Soirée : {{totalsoiree}}</span>
+</p>
+
+<ul>
+{{#people}}  <li>{{name}}</li>
+{{/people}}
+</ul>
+
+<p><b><a href="https://docs.google.com/forms/d/1T1aUM5llSDYZ96WBInh1lzLl6mwYKYE1AdwXKqTD2yA/viewform">Inscriptions par ici</a></b></p>
+
+</body>
+</html>
